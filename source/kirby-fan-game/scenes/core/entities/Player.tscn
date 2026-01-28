@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dc0y0r4qqx5y5"]
+
+[ext_resource type="Texture2D" uid="uid://b2ykt1amy3578" path="res://assets/images/kirby-walk.png" id="1_eu3b3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k438y"]
+size = Vector2(24, 24)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1018408347]
+texture_filter = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=380681480]
+position = Vector2(20, 28)
+shape = SubResource("RectangleShape2D_k438y")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1871621968]
+texture = ExtResource("1_eu3b3")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=71316606]
+position = Vector2(22, 30)
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = 0
+limit_right = 9999
+limit_bottom = 9999
+limit_smoothed = true

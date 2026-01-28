@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="Kirby Fan Game"
+run/main_scene="uid://bde7gkr5lk3qr"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=960
+window/size/viewport_height=540
 
 [physics]
 
