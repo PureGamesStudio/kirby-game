@@ -4,6 +4,11 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
 func _physics_process(delta: float) -> void:
+	############### herp the derp
+	print(str(Input.is_key_pressed(KEY_LEFT)))
+	print(str((Input.is_action_pressed("ui_left"))))
+	#############################
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta

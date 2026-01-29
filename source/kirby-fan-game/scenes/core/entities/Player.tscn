@@ -88,6 +88,7 @@ _data = {
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1018408347]
 texture_filter = 1
+collision_mask = 2
 script = ExtResource("1_k438y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=380681480]
