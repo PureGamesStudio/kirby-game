@@ -30,7 +30,7 @@ texture_repeat = 2
 texture = ExtResource("2_3htsb")
 centered = false
 region_enabled = true
-region_rect = Rect2(0, 0, 960, 540)
+region_rect = Rect2(0, 0, 1200, 640)
 
 [node name="BigClouds" type="Parallax2D" parent="." unique_id=1787291874]
 scroll_scale = Vector2(0.2, 0.2)
@@ -44,7 +44,7 @@ texture_repeat = 2
 texture = ExtResource("3_akcty")
 centered = false
 region_enabled = true
-region_rect = Rect2(0, 0, 960, 540)
+region_rect = Rect2(0, 0, 1200, 640)
 
 [node name="CharacterBody2D" parent="." unique_id=1018408347 instance=ExtResource("1_2o7gn")]
 position = Vector2(445, 311)
