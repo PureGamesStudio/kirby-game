@@ -1,23 +1,71 @@
 [gd_scene format=3 uid="uid://bde7gkr5lk3qr"]
 
 [ext_resource type="PackedScene" uid="uid://dc0y0r4qqx5y5" path="res://scenes/core/entities/Player.tscn" id="1_2o7gn"]
+[ext_resource type="Texture2D" uid="uid://b8iantdx0wqsj" path="res://assets/images/grasslands-sky.png" id="1_rh7co"]
+[ext_resource type="Texture2D" uid="uid://l6skt4bleu6j" path="res://assets/images/grassland-cloud.png" id="2_3htsb"]
 [ext_resource type="PackedScene" uid="uid://kpq36y6o46ht" path="res://scenes/core/entities/SolidBlock.tscn" id="2_qxj1r"]
+[ext_resource type="Texture2D" uid="uid://coe0hlho0k4ad" path="res://assets/images/grassland-cloud-big.png" id="3_akcty"]
 
 [node name="Node2D" type="Node2D" unique_id=891585353]
 
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1433052058]
+scroll_scale = Vector2(0.1, 0.1)
+
+[node name="Sky" type="Sprite2D" parent="Parallax2D" unique_id=791787074]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("1_rh7co")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 3840, 2160)
+
+[node name="Clouds" type="Parallax2D" parent="." unique_id=1042528529]
+scroll_scale = Vector2(0.3, 0.3)
+repeat_size = Vector2(240, 128)
+autoscroll = Vector2(10, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Clouds" unique_id=917050472]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("2_3htsb")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 960, 540)
+
+[node name="BigClouds" type="Parallax2D" parent="." unique_id=1787291874]
+scroll_scale = Vector2(0.2, 0.2)
+scroll_offset = Vector2(99, 55)
+repeat_size = Vector2(240, 128)
+autoscroll = Vector2(5, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="BigClouds" unique_id=421870711]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("3_akcty")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 960, 540)
+
 [node name="CharacterBody2D" parent="." unique_id=1018408347 instance=ExtResource("1_2o7gn")]
+position = Vector2(445, 311)
 
 [node name="Node2D" parent="." unique_id=83521693 instance=ExtResource("2_qxj1r")]
-position = Vector2(21, 119)
+position = Vector2(452, 370)
 
-[node name="Node2D2" parent="." unique_id=1268778829 instance=ExtResource("2_qxj1r")]
-position = Vector2(149, 160)
+[node name="Node2D2" parent="." unique_id=724167760 instance=ExtResource("2_qxj1r")]
+position = Vector2(476, 370)
 
-[node name="Node2D3" parent="." unique_id=938874655 instance=ExtResource("2_qxj1r")]
-position = Vector2(277, 190)
+[node name="Node2D3" parent="." unique_id=2094492510 instance=ExtResource("2_qxj1r")]
+position = Vector2(500, 370)
 
-[node name="Node2D4" parent="." unique_id=1637416661 instance=ExtResource("2_qxj1r")]
-position = Vector2(-107, 119)
+[node name="Node2D4" parent="." unique_id=644090972 instance=ExtResource("2_qxj1r")]
+position = Vector2(428, 370)
 
-[node name="Node2D5" parent="." unique_id=734397088 instance=ExtResource("2_qxj1r")]
-position = Vector2(-235, 119)
+[node name="Node2D5" parent="." unique_id=1311350902 instance=ExtResource("2_qxj1r")]
+position = Vector2(404, 370)
+
+[node name="Node2D6" parent="." unique_id=1104173433 instance=ExtResource("2_qxj1r")]
+position = Vector2(524, 402)
+
+[node name="Node2D7" parent="." unique_id=292852632 instance=ExtResource("2_qxj1r")]
+position = Vector2(548, 434)
