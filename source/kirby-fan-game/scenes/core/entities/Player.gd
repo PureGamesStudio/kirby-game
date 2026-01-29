@@ -22,7 +22,6 @@ func _physics_process(delta: float) -> void:
 	if direction:
 		velocity.x = direction * SPEED
 		var direction_name = "left" if direction < 0 else "right"
-		print(direction_name)
 		%AnimationPlayer.play("walk_" + direction_name)
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)

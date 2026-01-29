@@ -9,3 +9,15 @@
 
 [node name="Node2D" parent="." unique_id=83521693 instance=ExtResource("2_qxj1r")]
 position = Vector2(21, 119)
+
+[node name="Node2D2" parent="." unique_id=1268778829 instance=ExtResource("2_qxj1r")]
+position = Vector2(149, 160)
+
+[node name="Node2D3" parent="." unique_id=938874655 instance=ExtResource("2_qxj1r")]
+position = Vector2(277, 190)
+
+[node name="Node2D4" parent="." unique_id=1637416661 instance=ExtResource("2_qxj1r")]
+position = Vector2(-107, 119)
+
+[node name="Node2D5" parent="." unique_id=734397088 instance=ExtResource("2_qxj1r")]
+position = Vector2(-235, 119)
