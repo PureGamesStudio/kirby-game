@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://bde7gkr5lk3qr"]
 
 [ext_resource type="PackedScene" uid="uid://dc0y0r4qqx5y5" path="res://scenes/core/entities/Player.tscn" id="1_2o7gn"]
+[ext_resource type="PackedScene" uid="uid://kpq36y6o46ht" path="res://scenes/core/entities/SolidBlock.tscn" id="2_qxj1r"]
 
 [node name="Node2D" type="Node2D" unique_id=891585353]
 
 [node name="CharacterBody2D" parent="." unique_id=1018408347 instance=ExtResource("1_2o7gn")]
+
+[node name="Node2D" parent="." unique_id=83521693 instance=ExtResource("2_qxj1r")]
+position = Vector2(21, 119)

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dc0y0r4qqx5y5"]
 
 [ext_resource type="Texture2D" uid="uid://b2ykt1amy3578" path="res://assets/images/kirby-walk.png" id="1_eu3b3"]
+[ext_resource type="Script" uid="uid://dgsxp7xsw8e0j" path="res://scenes/core/entities/Player.gd" id="1_k438y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k438y"]
 size = Vector2(24, 24)
@@ -87,6 +88,7 @@ _data = {
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1018408347]
 texture_filter = 1
+script = ExtResource("1_k438y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=380681480]
 position = Vector2(20, 28)
