@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://bivmjmirc8f5c"]
+
+[ext_resource type="Script" uid="uid://bmj8pij2pnqj2" path="res://scenes/core/entities/enemies/bronto_burt.gd" id="1_775jb"]
+[ext_resource type="Texture2D" uid="uid://cqfnyc36l1jkc" path="res://assets/images/enemies/bronto-burt.png" id="1_jas0v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_775jb"]
+radius = 12.0
+
+[sub_resource type="Animation" id="Animation_jas0v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_775jb"]
+resource_name = "fly_left"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_2ec8c"]
+resource_name = "fly_right"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hdas7"]
+_data = {
+&"RESET": SubResource("Animation_jas0v"),
+&"fly_left": SubResource("Animation_775jb"),
+&"fly_right": SubResource("Animation_2ec8c")
+}
+
+[node name="BrontoBurt" type="CharacterBody2D" unique_id=1740639181]
+texture_filter = 1
+collision_layer = 4
+collision_mask = 7
+script = ExtResource("1_775jb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=933383837]
+position = Vector2(12, 12)
+shape = SubResource("CircleShape2D_775jb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=163663668]
+texture = ExtResource("1_jas0v")
+centered = false
+hframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2100926914]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_hdas7")
