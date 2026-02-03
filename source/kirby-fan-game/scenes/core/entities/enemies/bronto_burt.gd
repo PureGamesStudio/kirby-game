@@ -30,4 +30,3 @@ func _physics_process(delta):
 		is_flying_left = !is_flying_left
 		var animation_name = "fly_" + ("right" if is_flying_left else "left")
 		%AnimationPlayer.play(animation_name)
-		print(animation_name)
